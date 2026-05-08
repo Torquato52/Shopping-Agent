@@ -33,6 +33,9 @@ O projeto foi dividido em três partes principais:
 A RunFlow-API é responsável por disponibilizar os endpoints utilizados pelo agente. Ela fornece todas as informações relacionadas ao catálogo de produtos e aos pedidos realizados.
 Para simplificar os testes e demonstrações, os dados não estão sendo persistidos em um banco de dados real. Todo o catálogo foi mockado diretamente em arrays dentro da aplicação, permitindo focar exclusivamente no comportamento do agente e no fluxo de comunicação entre os serviços.
 
+
+<img width="920" height="388" alt="image" src="https://github.com/user-attachments/assets/e1f6c661-5f25-4f95-9352-0372c5929e46" />
+
 ### 2. FlowAgent
 O FlowAgent funciona como o núcleo do projeto, sendo responsável por toda a lógica de comportamento da IA.
 Dentro dele estão definidos:
@@ -41,8 +44,6 @@ Dentro dele estão definidos:
 * As regras de comportamento
 * As Tools utilizadas pelo agente
 * O fluxo de execução das ações
-
-<img width="920" height="388" alt="image" src="https://github.com/user-attachments/assets/e1f6c661-5f25-4f95-9352-0372c5929e46" />
 
 Cada endpoint da API possui uma Tool específica responsável pela comunicação com a RunFlow-API.
 Para evitar chamadas inválidas e problemas de tipagem, foi utilizado o **Zod**, biblioteca responsável pela validação dos schemas. Dessa forma, a IA só consegue executar ações caso os dados estejam no formato esperado, reduzindo erros de estrutura e inconsistências nas requisições.
