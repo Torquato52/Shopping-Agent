@@ -48,7 +48,9 @@ Dentro dele estão definidos:
 Cada endpoint da API possui uma Tool específica responsável pela comunicação com a RunFlow-API.
 Para evitar chamadas inválidas e problemas de tipagem, foi utilizado o **Zod**, biblioteca responsável pela validação dos schemas. Dessa forma, a IA só consegue executar ações caso os dados estejam no formato esperado, reduzindo erros de estrutura e inconsistências nas requisições.
 
+
 <img width="912" height="221" alt="image" src="https://github.com/user-attachments/assets/235a63b7-7667-4da4-ba16-398a27cb32aa" />
+
 
 Para a execução da IA, a escolha foi utilizar o **Ollama**, principalmente pela possibilidade de rodar modelos localmente sem custos de API e sem limitação de requisições. Toda a execução acontece localmente através de contêiner Docker.
 O modelo escolhido como motor principal foi o **Granite 4.1 (IBM)**, por apresentar o melhor desempenho no cenário de agentes autônomos com Tool Calling. Durante os testes, ele demonstrou maior capacidade de:
@@ -83,7 +85,9 @@ Sempre que existe uma tentativa de compra, o agente valida automaticamente se o 
 Após a confirmação do pedido e validação dos dados, o agente realiza a requisição POST para criação do pedido, respeitando todas as regras de tipagem definidas pelo Zod.
 Abaixo está o log de execução do Docker, mostrando as requisições para modelo e o tempo de resposta durante as chamadas:
 
+
 <img width="681" height="189" alt="image" src="https://github.com/user-attachments/assets/6b8e0113-f4d5-4491-8b09-157534db9895" />
+
 
 ---
 
